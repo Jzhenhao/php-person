@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/b_login.css">
+
+    <title>登录</title>
+
+</head>
+
+<body>
+<span class="visible-lg"><!-- bootstrap自适应工具  大屏幕>=1200px可见 必须全屏才可以使用-->
+
+ <p class="login">
+
+    <p class="loginmain">
+     <div class="biao">
+        <h2>个人事务管理系统</h2>
+            <form action="login_check.php" class="form-horizontal" method="post">
+                <!-- 用户名 -->
+                  <p class="form-group">
+                    <!-- for 属性规定 label 绑定到哪个表单元素 -->
+                      <label for="username" class="col-lg-1 control-label">用户名:</label>
+                       <p class="col-lg-4">
+                        <input type="text" name="username" id="username" class="form-control" placeholder="请输入登录账号"/>
+                      </p>
+                </p>
+                <p class="form-group"></p>
+                  <p class="form-group"></p>
+                <!-- 密码 -->
+                  <p class="form-group">
+                      <label for="password" class="col-lg-1 control-label">密&nbsp;&nbsp;码:</label>
+                      <p class="col-lg-4">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="请输入密码"/>
+                      </p>
+                </p>
+                <p class="form-group"></p>
+                   <p class="form-group"></p>
+                <!-- 验证码 -->
+
+                <p class="form-group">
+                      <!-- for 属性规定 label 与哪个表单元素绑定。 -->
+                      <label for="captcha" class="col-lg-1 control-label">验证码:</label>
+                     <p class="col-lg-2">
+                        <!-- ./ 当前路径 -->
+                         <!-- 用户输入验证码的框  -->
+                        <input type="text" name="captcha"  id="captcha" class="form-control" placeholder="请输入下图内容："  />
+                         <!--   当用户链接时，void(0) 计算为 0，但 Javascript 上没有任何效果。 -->
+                     </p>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                          <!-- 验证码图片 -->
+
+                          <a href="#" onclick="javascript:reflash()">
+
+                       <img id="captcha_img" name="captcha_img"  alt="看不清楚，换一张"  border="1" src="captcha.php?r=<?php echo rand(); ?>" width=100 height=30>
+                      </a>
+                </p>
+                  <p class="form-group">
+                    <p class="col-lg-11 col-lg-offset-1">
+                        <span class="checkbox ">
+                            <label><input type="checkbox" name="" class="checkbox-inline">记住我</label>
+                       </span>
+                    </p>
+                </p>
+                <p class="form-group">
+                    <p>
+                    <p class="col-lg-1 col-lg-offset-1">
+
+                        <input type="submit" name="b_login" value="登录" class="btn btn-success btn-lg">
+
+                    </p>
+                    <p class="col-lg-1 col-lg-offset-1">
+                        <a href="register.html">
+                            <input type="button" name="b_register" value="注册" class="btn btn-success btn-lg">
+                        </a>
+                    </p>
+</span>
+<script src="js/b_login.js"></script>
+</body>
+</html>

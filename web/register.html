@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/b_register.css">
+
+    <title>后台注册页面</title>
+
+</head>
+
+<body>
+
+<p class="register">
+<form action="register_check.php" method="post" enctype="multipart/form-data" class="form">
+  <p class="form-group">
+
+    <label for="username">用户名:</label>
+
+    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+
+  </p>
+
+
+  <p class="form-group">
+
+    <label for="password">密码:</label>
+
+    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+
+  </p>
+
+ <p class="form-group">
+
+    <label for="confirmPassword">确认密码:</label>
+
+    <input type="password" class="form-control" id="confirmPassword" placeholder="ConfirmPassword" name="confirmPassword">
+
+  </p>
+
+
+  <p class="form-group">
+
+     <a href="#" onclick="javascript:reflash()">
+
+      <img id="captcha_img" name="captcha_img"  alt="看不清楚，换一张"  border="1" src="captcha.php?r=<?php echo rand(); ?>" width=100 height=30>
+
+     </a>
+
+      <p><p>
+
+      <input type="text" class="form-control" id="captcha" placeholder="请输入上图验证码，F5刷新" name="captcha">
+
+  </p>
+
+  <p class="form-group">
+
+    <label for="photoFile">插入头像:</label>
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="10240000" id=""/>
+
+    <input type="file" id="photoFile" name="photoFile">
+  </p>
+
+  <button type="submit" name="b_register" class="col-lg-1 col-lg-offset-3">提交</button>
+  <p>
+    <a href="index.php">
+     <button type="button" name="b_login" class="col-lg-1 col-lg-offset-3">返回</button>
+    </a>
+   <span class="text2"></span>
+      </form>
+</p>
+</span>
+    <div class="youtu">
+        <h2>一时注册一时爽，终身用户终身爽！！！</h2>
+        <img src="images/mini.gif">
+    </div>
+</body>
+<script src="js/b_register.js"></script>
+
+</html>
